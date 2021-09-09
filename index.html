@@ -13,18 +13,20 @@
 </head>
 
 <body>
-    
+
     <div id="popDiv" class="ontop">
-       <div id="popup" >
-        <a href="#" onClick="hide('popDiv')">X</a>
-        <span>NEW PIXEL</span>
-        <div style="margin: 30px 0;">
-            <span style="font-size: .8em;">SIZE</span>
-            <input type="number" min="8" max="200">
+        <div id="popup">
+            <a href="#" onClick="hide('popDiv')">X</a>
+            <span>NEW PIXEL</span>
+            <div style="margin: 30px 0;">
+                <span style="font-size: .8em;">SIZE</span>
+                <input id="inputCanvasSize" type="number" value=30 min=10 max=85>
+            </div>
+            <button class="create" onClick="bbb()" >Create</button>
+
         </div>
-        <button class="create">Create</button>
         
-       </div>
+        
     </div>
 
 
@@ -35,7 +37,12 @@
         <div class='content'>
 
 
-         
+            <canvas width="550" height="550">
+                Your Browser doesn't support canvas.
+            </canvas>
+
+
+
 
 
             <nav class="nav">
@@ -67,12 +74,12 @@
                             <li class="menu-item">
                                 <a href="#" class="menu-link">Redo</a>
                             </li>
-                            
+
                         </ul>
                     </li>
                     <li class="menu-item">
                         <a href="#" class="menu-link">Help</a>
-                        
+
                     </li>
 
                 </ul>
@@ -80,11 +87,11 @@
 
 
             <div class='tools__bar'>
-                <div class='tool'><span class="material-icons">mode</span></div>
-                <div class='tool'><span class="material-icons">horizontal_rule</span></div>
-                <div class='tool'><span class="material-icons">crop_3_2</span></div>
-                <div class='tool'><span class="material-icons">radio_button_unchecked</span></div>
-                
+                <div class='tool' onclick="clickbutt('draw')"><span class="material-icons">mode</span></div>
+                <div class='tool' onclick="clickbutt('line')"><span class="material-icons">horizontal_rule</span></div>
+                <div class='tool' onclick="clickbutt('square')"><span class="material-icons">crop_3_2</span></div>
+                <div class='tool' onclick="clickbutt('circle')"><span class="material-icons">radio_button_unchecked</span></div>
+
             </div>
 
 
